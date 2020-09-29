@@ -5,9 +5,9 @@ This is a group project.
 You should work in groups of 2 to 4 (not alone and not more than 4). If this is a problem, please let me know ahead of time.
 
 ### Please enter the names of the group members here:
-1. 
-1. 
-1. 
+1. Julian Correa
+1. Alex Abair
+1. Jessie Pelosi
 1. 
 
 Please also creat a group in Problem Set 2 groups in Canvas with these people.
