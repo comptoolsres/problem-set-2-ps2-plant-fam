@@ -11,7 +11,7 @@ list_cities () {
 	return
 }
 
-list_cities flights.1K.csv FL 
+list_cities flights.May2018-April2020.csv FL 
 
 #This second function will *list* the cities, and is a more general function but requires a more detailed input
 
