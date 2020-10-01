@@ -11,11 +11,11 @@ get_flights_from_GNV () {
 }
 
 get_flights_from_GNV flights.May2018-April2020.csv ATL 
-echo $num_flights 
+echo "The number of flights from GNV to ATL is" $num_flights 
 
 get_flights_from_GNV flights.May2018-April2020.csv CLT
-echo $num_flights
+echo "The number of flights from GNV to CLT is" $num_flights
 
 get_flights_from_GNV flights.May2018-April2020.csv MIA
-echo $num_flights
+echo "The number of flights from GNV to MIA is" $num_flights
 
