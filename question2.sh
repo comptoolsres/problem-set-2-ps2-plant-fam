@@ -1,5 +1,4 @@
 # This script will provide the data to make the table in question 2
-
 # This function will get the number of flights from GNV to another destination airport 
 # This function requires the name of the file as the first arg and the destination airport code as the second arg
 
