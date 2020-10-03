@@ -6,7 +6,7 @@
 get_flights_from_GNV () {
 	infile="$1"
 	destination="$2"
-	num_flights=$(grep -E '^[0-9\-]*,\"[A-Z\"]*,\"GNV' $infile | grep $destination | cut -d ',' -f 21 | paste -sd+ | bc)
+	num_flights=$(cut -d ',' -f 3,7,13 $infile | grep '"GNV","'$destination | wc -l)
 	return
 }
 
@@ -25,7 +25,7 @@ echo "The number of flights from GNV to MIA is" $num_flights
 get_delayed_flights_from_GNV () {
 	infile="$1"
 	destination="$2"
-	delayed_flights=$(grep -E '^[0-9\-]*,\"[A-Z\"]*,\"GNV' $infile | grep $destination | cut -d ',' -f 13 | grep '1.00' | wc | cut -d ' ' -f 5)
+	delayed_flights=$(cut -d ',' -f 3,7,13 $infile | grep 'GNV","'$destination'",1' | wc -l)
 	return
 }
 
@@ -44,7 +44,7 @@ echo "The number of delayed flights to MIA is" $delayed_flights
 get_delayed_by_weather () {
 	infile="$1"
 	destination="$2"
-	weather_delays=$(grep -E '^[0-9\-]*,\"[A-Z\"]*,\"GNV' $infile | grep $destination | cut -d ',' -f 24 | grep -E [1-9]+ | wc | cut -d ' ' -f 6) 
+	weather_delays=$(cut -d ',' -f 3,7,24 flights.May2018-April2020.csv | grep 'GNV","'$destination | grep 0 | grep -v "0.00" | wc -l) 
 	return 
 }
 
